@@ -1,6 +1,6 @@
 # Project Writeup: AWS Multi-Account Landing Zone
 
-Why this exists, how it was built, why each choice, and the benefits. Also the talking-track for interviews.
+Why this exists, how it was built, why each choice, and the benefits.
 
 ## 1. The problem it solves
 
@@ -34,7 +34,7 @@ Modular Terraform, applied from the Organization management account:
 - Reproducible and reviewable: the whole org is a Terraform diff, peer-reviewed like any code.
 - Cost and attack-surface control: region restriction and consistent tagging keep both predictable.
 
-## 5. Interview talking points
+## 5. Design notes and trade-offs
 
 - SCP vs IAM policy: SCPs set the maximum permission boundary for an account (including root); IAM grants within it. An action needs both to be allowed.
 - Why protect security services with an SCP: stops an attacker with admin from disabling logging to cover tracks.
